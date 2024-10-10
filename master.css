@@ -1,0 +1,458 @@
+body {
+  color: black;
+  cursor: url(images/cursor1.png), auto;
+  height: fit-content;
+}
+.ripple {
+  width: 100%;
+  height: 100vh;
+  background-image: url(images/wallhaven-d6y12l_1920x1080.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: sans-serif;
+}
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+
+  list-style: none;
+  width: 100%;
+}
+nav {
+  z-index: 998;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  width: 100%;
+  height: 7vh;
+  overflow: hidden;
+}
+nav li {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+a {
+  text-decoration: none;
+}
+nav a {
+  z-index: 1;
+  position: relative;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0 30px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+nav ul li:first-child {
+  margin-right: auto;
+  margin-left: 200px;
+}
+
+nav a::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  left: 10px;
+  bottom: 5px;
+  right: 10px;
+  z-index: -1;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+
+  background-color: gray;
+  transform-origin: center;
+}
+nav a:hover {
+  color: rgb(43, 125, 226);
+}
+
+nav a:hover::before {
+  transition: transform 0.3s ease-in-out;
+  transform: scaleX(1);
+  transform-origin: center;
+}
+#description {
+  font-family: "New Amsterdam", sans-serif;
+  font-size: 30px;
+  vertical-align: middle;
+  height: fit-content;
+  transition: transform 0.5s ease-in-out;
+}
+#name {
+  font-size: 60px;
+  vertical-align: middle;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.5s ease-in-out;
+}
+#main {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  text-align: center;
+  height: 500px;
+}
+
+#sub-main {
+  position: absolute;
+
+  top: 30vh;
+  width: fit-content;
+  align-self: center;
+  scale: 1;
+  transition: all 0.5s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#splash {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  height: 100%;
+  width: 100vw;
+  background-color: rgb(201, 201, 201);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  align-items: center;
+  font-size: 24px;
+}
+#splash.hide {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 1s;
+}
+#sub-splash {
+  text-align: center;
+  font-size: 20px;
+  font-family: "Comic Neue", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+#sub-splash h4 {
+  font-weight: bold;
+  font-size: 25px;
+  font-family: "Comic Neue", cursive;
+  font-weight: 700;
+  font-style: normal;
+}
+#no-audio {
+  display: flex;
+  position: absolute;
+  bottom: -200px;
+  align-self: center;
+  font-size: 15px;
+  border: 0;
+  color: black;
+  font-family: "Comic Neue", cursive;
+  font-weight: 700;
+  font-style: normal;
+  border-color: none;
+  background: none;
+  border: none;
+  position: relative;
+  transition: scale 0.3s;
+}
+#no-audio::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  left: -5px;
+  bottom: 0px;
+  right: -5px;
+  z-index: -1;
+  background-color: rgb(67, 66, 66);
+  scale: 1;
+}
+#no-audio:hover {
+  scale: 1.1;
+  transition: all 0.3s;
+}
+
+#parag {
+  transition: all 0.5s ease-in-out;
+  font-size: 1vh;
+  color: white;
+  opacity: 0;
+}
+#parag-popup {
+  transform: translateY(20vh);
+  align-self: center;
+  font-size: 2.5vw;
+  text-align: center;
+  height: 19vh;
+
+  transition: all 0.7s ease-in-out;
+  opacity: 1;
+  scale: 1.1;
+  font-family: "Comic Neue", cursive;
+  font-weight: bold;
+  color: white;
+}
+#learn-more {
+  z-index: 500;
+  position: absolute;
+  right: 21vw;
+  top: 23vh;
+  width: fit-content;
+  align-self: center;
+  border-radius: 15px;
+  padding: 3px;
+  background-color: white;
+}
+.moove-up {
+  transform: translateY(-15vh);
+  transition: transform 0.5s ease-in-out;
+}
+#sec2 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#enter {
+  font-size: 20px;
+  padding: 10px;
+  border: 0;
+  color: black;
+  font-family: "Comic Neue", cursive;
+  font-weight: 700;
+  font-style: normal;
+  border-color: none;
+  border-radius: 25px;
+  height: 45px;
+  width: 72px;
+  z-index: 1;
+  overflow: hidden;
+  align-items: center;
+  letter-spacing: 1px;
+  transition: all 0.5s;
+}
+#enter:hover {
+  font-size: 0px;
+  transition: all 0.5s;
+}
+#enter-back {
+  position: relative;
+  background-color: black;
+  top: 20px;
+  right: 10px;
+  border: 10px;
+  height: 55px;
+  width: 72px;
+  z-index: 0;
+  transition: top 0.6s ease-in-out;
+}
+#enter:hover #enter-back {
+  top: -20px;
+  transition: top 0.6s ease-in-out;
+}
+#enter-text-2 {
+  letter-spacing: 1px;
+  font-size: 0px;
+  border: 0;
+  color: black;
+  font-family: "Comic Neue", cursive;
+  font-weight: 700;
+  font-style: normal;
+  color: white;
+  position: relative;
+  top: -140px;
+  border: 10px;
+  height: 23px;
+  text-align: center;
+  width: 51.69px;
+  z-index: 0;
+  transition: all 0.5s ease-in-out;
+}
+#enter:hover #enter-text-2 {
+  font-size: 20px;
+  top: -55px;
+  transition: all 0.5s ease-in-out;
+}
+
+#nav-logo {
+  z-index: 1;
+  height: 7vh;
+  transition: transform 0.1s linear;
+}
+button,
+#a:hover {
+  cursor: url(images/cursor1hover.png), auto;
+}
+footer {
+  background-color: rgb(45, 44, 44);
+  display: flex;
+  justify-content: space-around;
+  overflow: hidden;
+}
+#footer-links {
+  color: rgba(255, 255, 255, 0.5);
+  font-family: sans-serif;
+  display: flex;
+  justify-content: space-around;
+}
+#footer-link-headers,
+#footer-name {
+  color: white;
+  font-size: bold;
+  width: fit-content;
+}
+#footer-name {
+  padding: 10px;
+}
+#footer-list-item {
+  display: flex;
+  align-items: center;
+}
+#footer-ul {
+  list-style: none;
+  line-height: 1.5;
+  padding: 1vw;
+}
+#link_imgs {
+  padding-right: 1vw;
+  fill: grey;
+}
+#img-link {
+  list-style: none;
+  padding: none;
+  display: inline;
+  position: relative;
+  bottom: 30px;
+}
+
+#footer-div {
+  display: flex;
+  justify-content: center;
+}
+#social-media-links {
+  text-align: center;
+}
+footer img {
+  height: 35px;
+  padding-right: 7px;
+}
+#leftside-ul {
+  list-style: none;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+#X {
+  height: 25px;
+  padding: 10px;
+}
+#leftside-footer {
+  align-items: center;
+  font-size: 30px;
+  height: fit-content;
+}
+#gmail-popup {
+  z-index: 999;
+  position: fixed;
+  top: 40vh;
+  left: 33vw;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  height: 10vh;
+  width: 33vw;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+}
+#gmail-popup-text {
+  align-items: center;
+  font-size: 2vw;
+}
+#exit_button {
+  position: absolute;
+  top: 0;
+  right: 1vw;
+  border: none;
+  background-color: transparent;
+  font-size: 2vw;
+  scale: 1;
+  transition: scale 0.1s ease-in-out;
+}
+#exit_button:hover {
+  scale: 1.1;
+  transition: all 0.1s ease-in-out;
+  color: red;
+}
+.fa:hover {
+  cursor: url(images/cursor1hover.png), auto;
+  color: rgb(113, 110, 110);
+}
+.fa {
+  color: black;
+}
+
+.rotate {
+  transform: rotate(0deg);
+}
+.nav-fixed {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transition: top 1s ease-in-out;
+}
+#splashv2 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  height: 100%;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+}
+@media screen and (max-width: 600px) {
+  #nav a:not(:first-child) {
+    display: none;
+  }
+  #nav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #nav.responsive {
+    position: relative;
+  }
+  #nav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  #nav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}

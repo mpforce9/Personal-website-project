@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- jQuery Ripples JS -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=New+Amsterdam&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/svg+xml" href="" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="“Pragma”" content="”no-cache”" />
+    <meta http-equiv="“Expires”" content="”-1″" />
+    <meta http-equiv="“CACHE-CONTROL”" content="”NO-CACHE”" />
+    <link rel="stylesheet" href="master.css" />
+    <!-- jQuery -->
+
+    <title>Bilel Ben Hamed</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.ripples/0.5.3/jquery.ripples.min.js"></script>
+  </head>
+  <header>
+    <nav id="nav">
+      <ul>
+        <li id="logo_name" style="display: flex; justify-content: spacearound">
+          <img
+            src="images/Unleash The Fire Within With These 100 Dragon Tattoo Ideas.png"
+            id="nav-logo"
+            alt=""
+          />
+          <a href="#">
+            <pre onmouseover="button_hover()" style="letter-spacing: 2px">
+BILEL
+BEN HAMED</pre
+            >
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  
+
+  <body>
+    
+    <div class="ripple" id="ripple">
+      <div id="splash">
+        <div id="sub-splash">
+          <h4>BILEL BEN HAMED</h4>
+          <pre>
+A personal website 
+made to showcase and test my level
+in web development and design
+      </pre
+          >
+          <button
+            id="enter"
+            onmouseleave="mouse_on_leave()"
+            onmouseover="mouse_on_enter()"
+            onclick="start()"
+          >
+            Enter
+            <div id="enter-back"></div>
+            <div id="enter-text-2">Enter</div>
+          </button>
+          <br />
+          
+          <div id="sec2">
+            <button id="no-audio" onclick="no_audio()">
+            Enter without audio
+          </button>
+            
+          </div>
+          
+        
+        </div>
+    
+      </div>
+      <audio id="sound">
+        <source src="sounds/Untitled video - Made with Clipchamp (7).mp3" type="audio/mpeg" />
+      </audio>
+
+      <div id="main">
+        <audio id="bgm">
+          <source
+            src="images/Chill Background Music [chill lo-fi hip hop beats].mp3"
+            type="audio/mpeg"
+          />
+        </audio>
+        <div id="sub-main">
+          <pre id="name">BILEL BEN HAMED </pre>
+          <pre id="description">A computer science student</pre>
+          <br />
+          
+        </div>
+        <br>
+        
+        <pre id="parag">
+Hi, I'm a 17-year-old computer science student.
+I started learning programming at 12 and am now
+ skilled in JavaScript, HTML, CSS, and Python.
+Unfortunatly i don't have any work that i have
+worked on to date wich is why I'm looking for 
+projects to help me improve and build on 
+my current abilities and hope to use this website
+as a portfollio for my future works.
+          
+        </pre
+          >
+      </div>
+      <br /><br /><br />
+    </div>
+  </body>
+  <footer>
+    <div id="leftside-footer">
+      <a id="footer-name" href="#">
+        <pre onmouseover="button_hover()" style="letter-spacing: 2px">
+BILEL
+BEN HAMED</pre
+        >
+      </a>
+      <div id="img-link">
+        <ul id="leftside-ul">
+          <li>
+            <a id="link_imgs" href="#"
+              ><i class="fa fa-instagram" aria-hidden="true"></i
+            ></a>
+          </li>
+          <li>
+            <a id="link_imgs" href="#"
+              ><i class="fa fa-facebook" aria-hidden="true"></i
+            ></a>
+          </li>
+          <li>
+            <a id="link_imgs" href="#"
+              ><i class="fa fa-twitter" aria-hidden="true"></i
+            ></a>
+          </li>
+          <li>
+            <i onclick="gmail()" class="fa fa-envelope" aria-hidden="true"></i>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <br /><br />
+
+    <div id="footer-links">
+      <ul id="footer-ul">
+        <li id="footer-list-item">
+          <h4 id="footer-link-headers">Contacts</h4>
+        </li>
+        <li>Gmail:bilelbenhamed00@gmail.com</li>
+      </ul>
+
+      <ul id="footer-ul">
+        <li><h4 id="footer-link-headers">Skills</h4></li>
+        <li>Html</li>
+        <li>Css</li>
+        <li>JavaScript</li>
+        <li>Python</li>
+      </ul>
+
+    
+      </ul>
+    </div>
+  </footer>
+  <p
+    style="
+      background-color: rgba(40, 39, 41, 255);
+      margin: 0;
+      text-align: center;
+      color: rgba(112, 111, 112, 255);
+      padding: 18px 18px;
+    "
+  >
+    © 2024 Bilel Ben Hamed, all rights reserved
+  </p>
+
+  <script src="js/main.js"></script>
+</html>
